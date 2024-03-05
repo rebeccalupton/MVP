@@ -4,6 +4,8 @@ import { useState } from 'react'
 import './App.css'
 import HomePage from './HomePage.jsx'
 import VolunteerView from "./VolunteerView"
+import StaffView from "./StaffView"
+import SignUpConfirmation from "./SignUpConfirmation"
 
 
 
@@ -16,38 +18,52 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 // Maybe create a new file later for the entrance page and leave the APP file as the root
 
 function App() {
-  const [someState, setSomeState] = useState(0)
+//   const [someState, setSomeState] = useState(0)
  
-  function clickVolunteerInfo() {
-    alert("hello!")
+//   function clickVolunteerInfo() {
+//     alert("hello!")
  
   
 
 return (  
+
  <>
+
    <Routes>
 /* all routes will go inside routes tags here */
     <Route 
-        path="/yourPath" 
+        path="/" 
         // you create the yourPath name whatever you like
-        element={<YourComponent props = {yourProps} />} 
+        element={<HomePage/>} 
         // your component will be the file/page name that you want to show
       />
+    <Route 
+        path="/VolunteerView" 
+        element={<VolunteerView/>} 
+      />
+    <Route 
+        path="/StaffView" 
+        element={<StaffView/>} 
+      />
+    <Route 
+        path="/SignUpConfirmation" 
+        element={<SignUpConfirmation/>} 
+      />
 
-       <Route
+    {/* <Route
         path="*"
-        element={<Error404 />} // star means if I go anywhere that is not a defined path, to present the error 404
+        element={<Error404 />} // star means if I go anywhere that is not a defined path, to present the error 404 */}
+      {/* /> */} 
 
-//         // useNavigate function, save function in a variable which can easily navigate someone to a new page upon submitting a form etc. Import all routes to define the path and throughout the app you can use the paths in the return to render. 
+       {/* useNavigate function, save function in a variable which can easily navigate someone to a new page upon submitting a form etc. Import all routes to define the path and throughout the app you can use the paths in the return to render.  */}
 
-     />
     
      </Routes>
      
          </>
 
 )};
-};
+
  
 
 export default App;

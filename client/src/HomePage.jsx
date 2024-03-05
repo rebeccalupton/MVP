@@ -1,5 +1,8 @@
 import React from 'react'
 import './App.css'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 export default function HomePage() {
@@ -12,17 +15,38 @@ export default function HomePage() {
     return (
      <>
     
-      <h1>Name of organization</h1> 
-      <h2>About our missions</h2>
-      <img src = "https://images.pexels.com/photos/8078379/pexels-photo-8078379.jpeg?auto=compress&cs=tinysrgb&w=600"/>
-      <p>Homeless charities play a crucial role in addressing the pressing issue of homelessness by providing support and resources to those in need. These organizations are dedicated to offering shelter, food, and essential services to individuals experiencing homelessness, aiming to restore their dignity and help them regain control of their lives. Homeless charities often operate shelters where individuals can find a safe place to sleep, access hygiene facilities, and receive meals. Additionally, these charities may offer outreach programs to connect with those living on the streets, providing them with necessities such as clothing, blankets, and medical assistance. Beyond immediate relief, many homeless charities also focus on long-term solutions, including job training, counseling, and housing assistance, to help individuals break the cycle of homelessness. Through their tireless efforts, homeless charities contribute significantly to building a more compassionate and supportive community for those facing housing insecurity.</p>
-      <button>Join us and sign up</button>
-      <button onClick={clickVolunteerInfo}>Volunteer info page for host</button>
-      <footer>
-        <p>
-          Contact info for organization
-        </p>
-      </footer>
+      <h1>The Giving Project</h1> 
+      <h2>About our mission</h2>
+      <p>Calling all compassionate hearts! The Giving Project invites you to be a part of a transformative initiative that combines altruism and direct impact. As a volunteer-driven charity, we rely on individuals like you to donate both time and food items to make a meaningful difference in the lives of those experiencing homelessness. Join our community of dedicated volunteers who understand the power of collective efforts in creating positive change. Signing up for different shifts is easy and flexible, allowing you to contribute in a way that fits your schedule. By participating in The Giving Project, you'll have the opportunity to prepare nourishing meals, pack care packages, and personally distribute sustenance to those in need. We believe that every act of kindness, no matter how small, creates a ripple effect of positive change. Join us in the mission to alleviate hunger and restore hope. It's not just about providing food; it's about building connections, fostering empathy, and making a real impact in the lives of others. Be the change – volunteer with The Giving Project and let's make a difference together!.</p>
+      <h2>How does it work?</h2>
+      <p>
+        We gather every Saturday and Sunday at our local headquarters in the heart of Barcelona, offering two shifts for your convenience: 1-3pm or 7-9pm. For each shift, we need 4-5 dedicated volunteers. When you sign up, you commit to bringing 30 portions of a specific food item needed for the day. Our regular menu includes cheese sandwiches, tuna sandwiches, boiled eggs, soft fruit and a sweet treat like muffins or cereal bars. The organization takes care of bulk purchasing juice/water to supply. You are welcome to bring alternative food items either in addition or instead of those listed, as well as non food items such as clothing or personal hygiene products; please reach out to the organization beforehand to ensure coordination
+      </p>
 
-    </>
-    )};
+      <p>
+        Each volunteer will be equipped with a trolley filled with these essential items as we follow a designated route on foot through central Barcelona. This route is carefully planned based on known locations where homeless individuals settle, although it may be subject to change due to weather, season, time, or other conditions. Fear not if it's your first time – a main leader familiar with the route will guide the volunteers. . Your commitment, no matter your experience level, is crucial in making a positive impact on our community. To make the experience even more impactful, why not join with a friend or two and split the responsibility of buying/making the food.
+      </p>
+      <div className="img-homepage">
+      <img src="/images/Image-1.png" alt="Image-1" />
+      <img src="/images/Image-5.png" alt="Image-5" />
+      <img src="/images/Image-8.png" alt="Image-8" />
+      <img src="/images/Image-9.png" alt="Image-9" />
+      <img src="/images/Image-12.png" alt="Image-12" />
+      <img src="/images/Image-13.png" alt="Image-13" />
+      </div>
+      {/* <img src = "https://media.istockphoto.com/id/1317220163/fr/photo/adolescent-aidant-%C3%A0-pr%C3%A9parer-le-petit-d%C3%A9jeuner-un-matin-ensoleill%C3%A9.jpg?s=612x612&w=0&k=20&c=qdGR-1NVe5T3PhQmzcMkfwDR1vgUuc6jTVxghHH-G7A=" /> */}
+      <Link to="/VolunteerView"><button>Join us and sign up</button></Link>
+      <button onClick={clickVolunteerInfo}>Volunteer info page for host</button>
+      <footer className="footer">
+        <div className="contact-info">
+          <h3>Contact Information</h3>
+          <p>
+            Address: Carrer Palau 6, Barcelona, 08002<br />
+            Phone: +447479231451<br />
+            Email: <a href="mailto:thegivingproject@gmail.com">thegivingproject@gmail.com</a>
+          </p>
+        </div>
+      </footer>
+      </>
+  );
+}

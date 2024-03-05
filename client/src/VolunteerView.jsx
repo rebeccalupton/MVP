@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import { useState } from 'react'
+import HomePage from './HomePage';
 
 export default function VolunteerView(props) {
   const [signUpData, setSignUpData] = useState({
@@ -9,7 +11,7 @@ export default function VolunteerView(props) {
     signUpDate: "",
     shiftTime: "",
     itemsDonate: "",
-  })};
+  });
 
   const handleInputChange = (event) => {
     console.log(event)
@@ -26,6 +28,7 @@ export default function VolunteerView(props) {
     event.preventDefault();
     console.log("form submitted!", signUpData);
     //ADD Functionality laterrrr
+  }
 
 
     return (
@@ -84,8 +87,7 @@ export default function VolunteerView(props) {
       </form>
     </div>
   );
-  };
-
+    };
   
 
 // - Render a form for volunteers to sign up.
