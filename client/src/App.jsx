@@ -33,9 +33,7 @@ return (
 /* all routes will go inside routes tags here */
     <Route 
         path="/" 
-        // you create the yourPath name whatever you like
         element={<HomePage/>} 
-        // your component will be the file/page name that you want to show
       />
     <Route 
         path="/VolunteerView" 

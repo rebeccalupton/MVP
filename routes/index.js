@@ -3,11 +3,17 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send({ title: 'Express' });
-
-
+router.get('/', async (req, res) => {
+  try {
+    let result = await db("SELECT * FROM table_volunteers"); 
+    res.status(200).send(result.data); // send data to client.
+  } catch (error) {
+    res.status(500).send({ error: error.message });
+  }
 });
+
+
+
 router.post("/", async (req, res) => {
   // The request's body is available in req.body. done with object destructuring.
   const { first_name, last_name, phone_number, sign_up_date, shift_time, items_to_donate } = req.body;
@@ -26,3 +32,4 @@ router.post("/", async (req, res) => {
 });
 
 module.exports = router;
+
