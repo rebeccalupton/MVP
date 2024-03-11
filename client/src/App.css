@@ -1,7 +1,6 @@
 .homepage {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* grid-template-columns: repeat(2, 1fr); */
   gap: 5px;
   row-gap: 20px;
 }
@@ -65,7 +64,6 @@
 
 h1 {
   padding: 1em;
-  /* font-size: 40px; */
 }
 
 button {
